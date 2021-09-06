@@ -1,25 +1,34 @@
 pipeline {
-    agent any
-
+    agent any 
     stages {
-        stage('Hello1') {
+        stage('Static Analysis') {
             steps {
-                echo 'Hello World1'
+                echo 'Run the static analysis to the code' 
             }
         }
-        stage('Hello2') {
+        stage('Compile') {
             steps {
-                echo 'Hello World2'
+                echo 'Compile the source code' 
             }
         }
-        stage('Hello3') {
+        stage('Security Check') {
             steps {
-                echo 'Hello World3'
+                echo 'Run the security check against the application' 
             }
         }
-        stage('Hello4') {
+        stage('Run Unit Tests') {
             steps {
-                echo 'Hello World4'
+                echo 'Run unit tests from the source code' 
+            }
+        }
+        stage('Run Integration Tests') {
+            steps {
+                echo 'Run only crucial integration tests from the source code' 
+            }
+        }
+        stage('Publish Artifacts') {
+            steps {
+                echo 'Save the assemblies generated from the compilation' 
             }
         }
     }
