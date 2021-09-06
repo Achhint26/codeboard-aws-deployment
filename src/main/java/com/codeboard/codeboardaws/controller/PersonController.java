@@ -8,6 +8,6 @@ public class PersonController {
 
 	@RequestMapping("/getname")
 	public String getName() {
-		return "Sunny From Jenkins Deployment Webhook Test";
+		return "Achhint From Jenkins Deployment Webhook Test";
 	}
 }
